@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Park it!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", intial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">Park it!</h1>
+      <img class="img-fluid" src="static/Park-it.jpg"/>
+      <h2 class="text-center mt-2">About Park It</h2>
+      <p class="lead">
+        paragraph
+      </p>
+      <h2 class="text-center mt-2">Available {{city}} Spots</h2>
+      <div>
+        {% for spot in spots %}
+          {%include 'spot.html' %}
+        {% endfor %}
+      </div>
+      <div class="text-center"> 
+      <button class="btn btn-primary bt-lg">Contact us</button>
+      </div>
+    </div>
+  </body>
+</html>
